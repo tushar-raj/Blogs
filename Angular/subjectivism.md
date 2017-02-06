@@ -1,4 +1,4 @@
-##Family talk
+#Family talk
 
 This recipe will make your Angular components talk. Asynchronously.
 
@@ -30,13 +30,14 @@ export class FamilyService {
   // Observable number streams
   thingYouWillNeed$ = this.thingYouWillNeed.asObservable();
   
-  // Service message commands
+  // Service message commands  
   whenSomethingHappens(communicateThis: number) {
     this.thingYouWillNeed.next();
   }
 }
 
 ```
+The function we defined at the end, `whenSomethingHappens()` is the main part. It calls the obsevable's `next()` and keeps the ball rolling.
 
 
 ###Step 3: The trigger
