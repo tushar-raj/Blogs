@@ -24,10 +24,10 @@ Create a subject of the thing you need, like this:
 
 ```javascript
 export class FamilyService {
-  // Observable string sources. The example uses number, but it could be anything
+  // Observable number sources. The example uses number, but it could be anything
   private thingYouWillNeed = new Subject<number>();
   
-  // Observable string streams
+  // Observable number streams
   thingYouWillNeed$ = this.thingYouWillNeed.asObservable();
   
   // Service message commands
