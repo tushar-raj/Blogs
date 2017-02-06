@@ -12,7 +12,9 @@ Source: [Angular docs](https://angular.io/docs/ts/latest/cookbook/component-comm
 
 ###Step 1: The service
 Create a service. Angular CLI will create one for you automatically, but you still need to `provide` it. 
-Include it in the providers array **only** in the Parent.
+
+Include it in the providers array **only** in the Parent. (THis is important. Don't provide it anywhere else)
+
 Import it in your parent and child components and inject it using their constructors.
 
 ###Step 2: The subject
@@ -22,7 +24,7 @@ Create a subject of the thing you need, like this:
 
 ```javascript
 export class FamilyService {
-  // Observable string sources
+  // Observable string sources. The example uses number, but it could be anything
   private thingYouWillNeed = new Subject<number>();
   
   // Observable string streams
@@ -71,10 +73,10 @@ export class YoungerBro {
       })
   } 
 
-  useCash(cashAmount){ // called whenever the subscription fires
-      buyBeer()
-      eatOut()
-      buyJewelleryForGf()
+  useCash(cash){ // called whenever the subscription fires
+      buyBeer(cash/4)
+      eatOut(cash/4)
+      buyJewelleryForGf(cash/2)
   }
 
 }
