@@ -2,7 +2,7 @@
 
 This recipe will make your Angular components talk. Asynchronously.
 
-Source: [Angular docs](https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#bidirectional-service)
+Source: [Angular docs](https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#bidirectional-service), which are elliptical as usual, hence the need for this reference.
 
 ###Ingredients
 - A parent component. If there isn't one, create it.
@@ -78,6 +78,7 @@ export class YoungerBro {
   }
 
 }
+```
 
 You now have a family which can communicate properly.
 
