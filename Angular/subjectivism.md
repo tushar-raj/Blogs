@@ -13,7 +13,7 @@ Source: [Angular docs](https://angular.io/docs/ts/latest/cookbook/component-comm
 ###Step 1: The service
 Create a service. Angular CLI will create one for you automatically, but you still need to `provide` it. 
 
-Include it in the providers array **only** in the Parent. (THis is important. Don't provide it anywhere else)
+Include it in the providers array **only** in the Parent. (This is important. Don't provide it anywhere else)
 
 Import it in your parent and child components and inject it using their constructors.
 
