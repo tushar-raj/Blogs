@@ -17,6 +17,11 @@ Include it in the providers array **only** in the Parent. (THis is important. Do
 
 Import it in your parent and child components and inject it using their constructors.
 
+This service is not for all parts of your app. It needs to stay within the...
+
+![family](https://cdn.meme.am/cache/instances/folder487/22720487.jpg)
+
+
 ###Step 2: The subject
 
 A subject can be though of as both an Observable and an observer.
