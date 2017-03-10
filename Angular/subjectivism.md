@@ -37,7 +37,7 @@ export class FamilyService {
   
   // Service message commands  
   whenSomethingHappens(communicateThis: number) {
-    this.thingYouWillNeed.next();
+    this.thingYouWillNeed.next(communicateThis);
   }
 }
 
