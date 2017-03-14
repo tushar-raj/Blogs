@@ -1,16 +1,20 @@
-#Family talk
+Family talk
+======
 
 This recipe will make your Angular components talk. Asynchronously.
 
 Source: [Angular docs](https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#bidirectional-service), which are elliptical as usual, hence the need for this reference.
 
-###Ingredients
+Ingredients
+--------------
 - A parent component. If there isn't one, create it.
 - Child component(s) which need to communicate
 - A service
 - A `subject`, available in your nearby RxJS module.
 
-###Step 1: The service
+Step 1: The service
+--------------
+
 Create a service. Angular CLI will create one for you automatically, but you still need to `provide` it. 
 
 Include it in the providers array **only** in the Parent. (This is important. Don't provide it anywhere else)
@@ -22,7 +26,8 @@ This service is not for all parts of your app. It needs to stay within the...
 ![family](https://cdn.meme.am/cache/instances/folder487/22720487.jpg)
 
 
-###Step 2: The subject
+Step 2: The subject
+--------------
 
 A subject can be though of as both an Observable and an observer.
 Create a subject of the thing you need, like this:
@@ -45,7 +50,9 @@ export class FamilyService {
 The function we defined at the end, `whenSomethingHappens()` is the main part. It calls the obsevable's `next()` and keeps the ball rolling.
 
 
-###Step 3: The trigger
+Step 3: The trigger
+--------------
+
 Say there are two children, and ElderBro wants to communicate with YoungerBro. 
 It needs to bind the right event to a method which uses our service's `whenSomethingHappens()`
 
@@ -63,7 +70,8 @@ export class ElderBro {
 }
 ```
 
-###Step 4: The subscription
+Step 4: The subscription
+--------------
 
 The listening component then reacts to the event. It does so by subscribing the the observable from the service
 
